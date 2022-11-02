@@ -17,15 +17,37 @@ const Header = () => {
   // scroll event
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
+      window.scrollY > 60 ? setIsActive(true) : setIsActive(false); // after 60 pixels from the top state will change from false to true
     });
   });
   return (
     <header
-      className={`${isActive ? "bg-red-500" : "bg-green-500"} 
+      className={`${
+        isActive ? "lg:top-0 bg-white shadow-2xl" : "lg:top-[60px]"
+      } 
       py-6 lg:py-4 fixed w-full transition-all z-10`}
     >
-      Header
+      <div className="container">
+        <a href="#">
+          <img src={logo} alt="logo" />
+        </a>
+        {/* nav - initially hidder - show on desktop mode */}
+        <div className="hidden lg:flex">
+          <Nav />
+        </div>
+        {/* cta button - initially hidder - show on desktop */}
+        <button className="btn btn-sm btn-outline hidden lg:flex">
+          {btnText}
+        </button>
+        {/* mobile nav trigger btn - hidden on desktop */}
+        <button className="lg:hidden" onClick={() => setMobileNav(!mobileNav)}>
+          {mobileNav ? (
+            <HiOutlineX className="text-3xl text-accent" />
+          ) : (
+            <HiMenuAlt4 className="text-3xl text-accent" />
+          )}
+        </button>
+      </div>
     </header>
   );
 };
