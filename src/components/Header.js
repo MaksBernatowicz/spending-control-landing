@@ -24,10 +24,10 @@ const Header = () => {
     <header
       className={`${
         isActive ? "lg:top-0 bg-white shadow-2xl" : "lg:top-[60px]"
-      } 
-      py-6 lg:py-4 fixed w-full transition-all z-10`}
+      } py-6 lg:py-4 fixed w-full transition-all z-10`}
     >
-      <div className="container">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* logo */}
         <a href="#">
           <img src={logo} alt="logo" />
         </a>
@@ -47,6 +47,14 @@ const Header = () => {
             <HiMenuAlt4 className="text-3xl text-accent" />
           )}
         </button>
+        {/* mobile nav - hidden on desktop */}
+        <div
+          className={`${
+            mobileNav ? "left-0" : "-left-full"
+          } fixed top-0 bottom-0 w-[60vw] lg:hidden transition-all`}
+        >
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
