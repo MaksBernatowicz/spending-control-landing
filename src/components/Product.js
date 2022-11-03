@@ -9,7 +9,7 @@ const Product = () => {
   const { title, subtitle } = product;
   return (
     <section className="section">
-      <div className="bg-pink-200 container mx-auto">
+      <div className="container mx-auto">
         {/* title & subtitle*/}
         <div className="flex flex-col items-center lg:flex-row mb-10 lg:mb-20">
           <h2
