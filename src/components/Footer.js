@@ -12,11 +12,11 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left lg:justify-between gap-y-8">
           {/* logo */}
-          <div>
+          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="300">
             <img src={logo} alt="logo" />
           </div>
           {/* list 1 */}
-          <div>
+          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="500">
             <div className="text-2xl uppercase font-medium mb-6">Links</div>
             <ul className="flex flex-col gap-y-3">
               {links.map((item, index) => {
@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* list 2 */}
-          <div>
+          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="700">
             <div className="text-2xl uppercase font-medium mb-6">Legal</div>
             <ul className="flex flex-col gap-y-3">
               {links.map((item, index) => {
@@ -56,7 +56,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* newsletter */}
-          <div>
+          <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="900">
             <div className="text-2xl uppercase font-medium mb-6">
               {newsletter.title}
             </div>
@@ -79,6 +79,13 @@ const Footer = () => {
             <span className="text-sm text-light">{form.smallText}</span>
           </div>
         </div>
+        <hr
+          className="mt-10 mb-5"
+          data-aos="fade-up"
+          data-aos-offset="100"
+          data-aos-delay="300"
+        />
+        <Copyright />
       </div>
     </footer>
   );
