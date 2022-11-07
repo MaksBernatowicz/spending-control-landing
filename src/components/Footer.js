@@ -39,7 +39,7 @@ const Footer = () => {
           <div data-aos="fade-up" data-aos-offset="200" data-aos-delay="700">
             <div className="text-2xl uppercase font-medium mb-6">Legal</div>
             <ul className="flex flex-col gap-y-3">
-              {links.map((item, index) => {
+              {legal.map((item, index) => {
                 // destructure item
                 const { href, name } = item;
                 return (
