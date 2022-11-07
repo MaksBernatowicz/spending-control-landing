@@ -1,4 +1,6 @@
-# Welcome, my name is Maks and this is my app.
+# Hi, my name is Maks and this is landing page example.
+
+https://user-images.githubusercontent.com/96842769/199960317-79f543c7-0d22-4e77-9b2c-9d46030d5b74.mp4
 
 It is made with CRA
 
